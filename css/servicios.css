@@ -94,7 +94,7 @@
 }
 
 /* Desktop: 2 columnas + divisores */
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
   .services-cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -109,6 +109,9 @@
 
   .service-card:nth-child(n + 3) {
     border-top: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .services-title {
+    font-size: 1.5rem;
   }
 }
 
