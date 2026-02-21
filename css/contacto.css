@@ -1,0 +1,216 @@
+/* =========================
+   CONTACT (ALMAS style) — idéntico vibe
+   Usa tus overrides:
+   --pg-green-mid, --pg-text-light, --pg-text-muted, --radius-pill
+========================= */
+
+.contact--almas {
+  background: var(--pg-green-mid);
+  color: var(--pg-text-light);
+}
+
+/* Head */
+
+.contact--almas .services-eyebrow {
+  color: var(--pg-text-light);
+  opacity: 0.85;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact-title {
+  margin: 0;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: var(--pg-text-muted);
+  text-decoration: none;
+}
+
+.contact-lead {
+  margin: 0.85rem 0 0;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--pg-text-muted);
+}
+
+.contact-zones {
+  margin: 1.25rem 0 0;
+  color: rgba(245, 247, 244, 0.82);
+  letter-spacing: 0.02em;
+}
+
+/* Form */
+.contact-form {
+  margin-top: clamp(1.25rem, 3vw, 2rem);
+}
+
+/* Fields grid (mobile: 1 col, desktop: 2 col) */
+.contact-fields {
+  display: grid;
+  gap: 1.75rem 2rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.65rem;
+}
+
+/* Labels like the reference */
+.field-label {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: rgba(245, 247, 244, 0.9);
+}
+
+/* Underline input */
+.field-input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(245, 247, 244, 0.55);
+  border-radius: 0;
+  padding: 0.8rem 0 0.7rem;
+  color: var(--pg-text-light);
+  font: inherit;
+  line-height: 1.2;
+}
+
+.field-input::placeholder {
+  color: rgba(245, 247, 244, 0.65);
+}
+
+.field-input:focus {
+  outline: none;
+  border-bottom-color: rgba(245, 247, 244, 0.95);
+}
+
+/* Select arrow */
+.field-select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgba(245, 247, 244, 0.9) 50%),
+    linear-gradient(135deg, rgba(245, 247, 244, 0.9) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 58%,
+    calc(100% - 9px) 58%;
+  background-size:
+    6px 6px,
+    6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 1.8rem;
+}
+
+/* Textarea */
+.field-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Full width fields */
+.field-full {
+  grid-column: 1 / -1;
+}
+
+/* Footer */
+.contact-foot {
+  margin-top: 2rem;
+  display: grid;
+  gap: 0.9rem;
+  align-items: start;
+}
+
+/* Button like reference: white pill */
+.contact--almas .btn.btn-primary {
+  background: var(--pg-text-light);
+  color: var(--pg-green-dark);
+  border: 1px solid rgba(245, 247, 244, 0.25);
+  border-radius: var(--radius-pill);
+  padding: 0.95rem 1.25rem;
+  width: auto;
+  justify-content: center;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .contact--almas .btn.btn-primary:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+  }
+}
+
+.contact-note {
+  margin: 0;
+  color: rgba(245, 247, 244, 0.78);
+  line-height: 1.6;
+  max-width: 60ch;
+}
+
+/* Desktop: 2 columns like screenshot */
+@media (min-width: 900px) {
+  .contact-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-foot {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1.25rem;
+  }
+}
+/* Fix: opciones del select legibles */
+.contact--almas .field-select,
+.contact--almas select.field-input {
+  color-scheme: light; /* ayuda a que el popup use UI clara */
+}
+
+/* El popup (options) */
+.contact--almas select.field-input option {
+  color: var(--pg-green-dark);
+  background: var(--pg-sand);
+}
+
+/* Placeholder option */
+.contact--almas select.field-input option[value=""] {
+  color: rgba(15, 42, 29, 0.65);
+}
+
+/* Si tu primer option no tiene value, igual */
+.contact--almas select.field-input option:disabled {
+  color: rgba(15, 42, 29, 0.65);
+}
+/* Mobile: 2 columnas (como el ejemplo) */
+.contact--almas .contact-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 1.25rem; /* row/col */
+}
+
+/* Los campos que deben ocupar toda la fila */
+.contact--almas .field-full {
+  grid-column: 1 / -1;
+}
+
+/* Si querés que en pantallas MUY chicas vuelva a 1 columna */
+@media (max-width: 360px) {
+  .contact--almas .contact-fields {
+    grid-template-columns: 1fr;
+  }
+  .contact--almas .field-full {
+    grid-column: auto;
+  }
+}
+
+/* Textarea con leve contraste */
+.contact--almas .field-textarea {
+  background: rgba(15, 42, 29, 0.15); /* verde oscuro suave */
+
+  border: 1px solid rgba(245, 247, 244, 0.18);
+  padding: 0.9rem 1rem;
+}
+
+/* Focus más elegante */
+.contact--almas .field-textarea:focus {
+  border-color: rgba(245, 247, 244, 0.35);
+  background: rgba(15, 42, 29, 0.22);
+}

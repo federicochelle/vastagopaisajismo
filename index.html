@@ -1,283 +1,661 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <!-- =========================
+       BASICS
+  ========================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Paisajismo</title>
+  <title>Vástago Paisaje | Diseño de paisaje en Montevideo, Canelones y Maldonado</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="Estudio de paisajismo enfocado en el diseño consciente. Creamos espacios verdes que dialogan con la arquitectura en Montevideo, Canelones y Maldonado."
+  />
 
-    <!-- CSS principal de tu librería -->
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+  <!-- (opcional) keywords ya casi no aportan, pero si querés -->
+  <meta name="keywords" content="paisajismo, diseño de paisaje, jardines, Montevideo, Canelones, Maldonado, Vástago" />
 
-  <body>
-    <!-- NAVBAR -->
-  <header class="navbar">
-  <div class="container navbar-content">
+  <meta name="author" content="Vástago Paisaje" />
+  <meta name="robots" content="index, follow" />
 
-    <a href="#hero" class="navbar-brand">
+  <!-- Canonical (cambiá al dominio real) -->
+  <link rel="canonical" href="https://vastagopaisaje.com/" />
+
+  <!-- Theme color (móvil) -->
+  <meta name="theme-color" content="#0f2a1d" />
+
+  <!-- =========================
+       FAVICONS (ideal)
+       Generá set en realfavicongenerator.net
+  ========================== -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/site.webmanifest" />
+
+  <!-- =========================
+       OPEN GRAPH (Facebook/WhatsApp/LinkedIn)
+  ========================== -->
+  <meta property="og:site_name" content="Vástago Paisaje" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://federicochelle.github.io/vastago-facundo/" />
+  <meta property="og:title" content="Vástago Paisaje | Diseño de paisaje" />
+  <meta
+    property="og:description"
+    content="Estudio de paisajismo enfocado en el diseño consciente. Naturaleza integrada para la vida cotidiana."
+  />
+  <meta property="og:image" content="https://federicochelle.github.io/vastago-facundo/assets/hero.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Vástago Paisaje — diseño de paisaje" />
+  <meta property="og:locale" content="es_UY" />
+
+  <!-- =========================
+       TWITTER / X
+  ========================== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vástago Paisaje | Diseño de paisaje" />
+  <meta
+    name="twitter:description"
+    content="Paisajismo consciente para Montevideo, Canelones y Maldonado."
+  />
+  <meta name="twitter:image" content="https://federicochelle.github.io/vastago-facundo/assets/hero.png" />
+
+  <!-- =========================
+       FONTS (mejoradas)
+       Tip: unificá en 1 solo request por performance
+  ========================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- =========================
+       CSS
+  ========================== -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+  <body id="top">
+    <!-- Header -->
+<header class="site-header" id="top">
+  <div class="container flex flex-between flex-wrap header-inner">
+    <!-- Brand -->
+    <a class="brand brand-logo-only" href="#top" aria-label="Vástago Paisaje – Ir al inicio">
       <img
-        src="img/logo.png"
+        class="brand-logo"
+        src="assets/logoo.png"
         alt="Vástago Paisaje"
-        class="navbar-logo"
+        width="44"
+        height="44"
+        loading="eager"
       />
-      <span class="navbar-brand-text"></span>
+        <span class="brand-text">
+    <span class="brand-name">Vástago</span>
+    <span class="brand-sub">Paisaje</span>
+  </span>
     </a>
+    
 
-    <nav class="navbar-nav">
-      <a href="#servicios">Servicios</a>
-      <a href="#proceso">Proceso</a>
-      <a href="#contacto">Contacto</a>
+    <!-- Nav desktop -->
+    <nav class="nav nav-desktop" aria-label="Navegación principal">
+      <a class="nav-link" href="#proyectos">Proyectos</a>
+      <a class="nav-link" href="#servicios">Servicios</a>
+      <a class="nav-link" href="#estudio">Estudio</a>
+      <a class="nav-link" href="#contacto">Contacto</a>
+
+      <!-- CTA principal -->
+      
+
+      <!-- Link secundario -->
+      <a
+        class="btn btn-primary"
+        href="https://www.instagram.com/vastago.paisajismo/"
+        target="_blank"
+        rel="noopener"
+        aria-label="Instagram de Vástago Paisaje"
+        title="Instagram"
+      >
+        <svg
+          class="btn-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.25"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4l0 -8"
+          />
+          <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+          <path d="M16.5 7.5v.01" />
+        </svg>
+        Instagram
+      </a>
     </nav>
 
-    <button class="navbar-toggle" aria-label="Abrir menú">☰</button>
+    <!-- Botón hamburguesa (mobile) -->
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="nav-toggle-lines" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <!-- Overlay (mobile) -->
+  <div class="menu-overlay" data-menu-close hidden></div>
+
+  <!-- Menú mobile -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="nav nav-mobile" aria-label="Menú móvil">
+      <a class="nav-link" href="#proyectos" data-menu-close>Proyectos</a>
+      <a class="nav-link" href="#servicios" data-menu-close>Servicios</a>
+      <a class="nav-link" href="#estudio" data-menu-close>Estudio</a>
+      <a class="nav-link" href="#contacto" data-menu-close>Contacto</a>
+
+      
+
+      <a
+        class="btn btn-primary"
+        href="https://www.instagram.com/vastago.paisajismo/"
+        target="_blank"
+        rel="noopener"
+        data-menu-close
+      >
+        <svg
+          class="btn-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.25"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4l0 -8"
+          />
+          <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+          <path d="M16.5 7.5v.01" />
+        </svg>
+        Instagram
+      </a>
+    </nav>
   </div>
 </header>
+<main>
+      <section id="hero" class="section hero hero-image relative">
+        <!-- Imagen de fondo -->
+        <div class="hero-media" aria-hidden="true"></div>
 
-    <main>
-      <!-- HERO -->
-      <section class="hero" id="hero">
-  <div class="hero__bg" aria-hidden="true"></div>
-  <div class="hero__overlay" aria-hidden="true"></div>
 
-  <div class="hero__container container">
-    <div class="hero__brand hero-reveal">
-    <img src="img/logo.png" alt="">
-    </div>
-</section>
-      <section id="servicios" class="section-servicios">
-  <div class="container">
-    <!-- Header de sección -->
-    <div class="section-header">
-      <h2 class="section-title">Soluciones para tu espacio</h2>
-    </div>
+        <div class="container hero-inner">
+          <div class="hero-content stack-md">
+            
+            <h1 class="hero-title">Diseño de paisaje para la vida cotidiana</h1>
 
-    <!-- Cards -->
-    <div class="grid grid-3">
-      <div class="card">
-        <img src="img/casa.png" alt="Diseño de jardín urbano" />
-        <h3>DISEÑO</h3>
-        <p class="text-muted">
-          Diseñamos espacios verdes que dialogan con la arquitectura, el entorno y la forma de habitar cada lugar.
-        </p>
+            <p class="hero-lead">
+              Creamos espacios verdes que dialogan con la arquitectura.
+            </p>
+
+            <div class="hero-actions flex flex-wrap">
+              <a href="#proyectos" class="btn btn-primary"> Ver proyectos </a>
+              <a href="#contacto" class="btn btn-outline hero-btn-outline">
+                Coordinar visita
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="espacios" class="section projects">
+        <div class="container container-wide stack-lg">
+          <header class="services-head">
+            <p class="services-eyebrow">Trabajos</p>
+            <h2 class="services-title">Espacios donde trabajamos</h2>
+            <p class="services-lead">
+              Adaptamos cada propuesta al entorno, el uso y el nivel de
+              mantenimiento que buscás.
+            </p>
+          </header>
+
+          <div class="projects-grid">
+            <!-- 1 -->
+            <article class="project">
+              <a href="espacios.html" class="project">
+              <div class="project-media">
+                <img
+                  src="assets/azotea.jpeg"
+                  alt="Balcones urbanos"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-overlay">
+                <p class="project-name">Balcones urbanos</p>
+              </div></a>
+            </article>
+
+            <!-- 2 -->
+            <article class="project">
+              <a href="espacios.html" class="project">
+              <div class="project-media">
+                <img
+                  src="assets/balcon.jpeg"
+                  alt="Terrazas y azoteas"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-overlay">
+                <p class="project-name">Terrazas y azoteas</p>
+              </div></a>
+            </article>
+
+            <!-- 3 -->
+            <article class="project">
+              <a href="espacios.html" class="project">
+              <div class="project-media">
+                <img
+                  src="assets/fotooo.jpeg"
+                  alt="Patios residenciales"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-overlay">
+                <p class="project-name">Patios residenciales</p>
+              </div></a>
+            </article>
+
+            <!-- 4 -->
+            <article class="project project-large">
+              <a href="espacios.html" class="project">
+              <div class="project-media">
+                <img
+                  src="assets/fotoo.jpeg"
+                  alt="Jardines de mayor escala"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-overlay">
+                <p class="project-name">Jardines de mayor escala</p>
+              </div>
+              </a>
+            </article>
+
+            <!-- 5 -->
+            <article class="project project-large">
+              <a href="espacios.html" class="project">
+              <div class="project-media">
+                <img
+                  src="assets/milgenial.jpeg"
+                  alt="Comercios e interiores verdes"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-overlay">
+                <p class="project-name">Locales comerciales</p>
+              </div>
+            </article></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="servicios" class="section projects">
+        <div class="container container-wide stack-lg">
+          <header class="services-head">
+            <p class="services-eyebrow">Servicios</p>
+            <h2 class="services-title">
+              Paisajismo a medida, con criterio y detalle
+            </h2>
+            <p class="services-lead">
+              Propuestas adaptadas a cada espacio, estilo y nivel de
+              mantenimiento.
+            </p>
+          </header>
+
+          <div class="services-cards">
+            <!-- 1 -->
+            <a class="service-card" href="servicio-diseno.html">
+              <div class="service-icon" aria-hidden="true">
+                <!-- Leaf -->
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M20 4c-6 1-10 5-11 11"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M9 15c-2.5 0-4-1.5-5-4 4.2-1 7.7-.5 10 2"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3 class="service-title">Diseño de espacios verdes</h3>
+                <p class="service-desc">
+                  Propuesta integral según luz, uso y mantenimiento.
+                </p>
+              </div>
+            </a>
+
+            <!-- 2 -->
+            <a class="service-card" href="servicio-asesoramiento.html">
+              <div class="service-icon" aria-hidden="true">
+                <!-- Compass -->
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M14.8 9.2 13.3 13.3 9.2 14.8 10.7 10.7 14.8 9.2Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3 class="service-title">Asesoramiento personalizado</h3>
+                <p class="service-desc">
+                  Decisiones claras para mejorar tu espacio sin obra completa.
+                </p>
+              </div>
+            </a>
+
+            <!-- 3 -->
+            <a class="service-card" href="servicio-instalacion.html">
+              <div class="service-icon" aria-hidden="true">
+                <!-- Tools -->
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M21 7a4 4 0 0 1-5.7 3.6L8.6 17.3a2 2 0 0 1-2.8 0l-.1-.1a2 2 0 0 1 0-2.8l6.7-6.7A4 4 0 0 1 17 3l-2.2 2.2 4 4L21 7Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3 class="service-title">Provisión e instalación</h3>
+                <p class="service-desc">
+                  Ejecución prolija: selección, traslado y puesta a punto.
+                </p>
+              </div>
+            </a>
+
+            <!-- 4 -->
+            <a class="service-card" href="servicio-mantenimiento.html">
+              <div class="service-icon" aria-hidden="true">
+                <!-- Calendar -->
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7 3v3M17 3v3M4 8h16M6 21h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M8 12h4M8 16h8"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3 class="service-title">Mantenimiento y seguimiento</h3>
+                <p class="service-desc">
+                  Visitas puntuales o plan programado para sostener el
+                  resultado.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Option 1: single CTA at the end -->
+          <div class="services-more">
+            <a href="servicios.html" class="btn btn-primary"
+              >Conocé nuestra propuesta completa
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT / ESTUDIO -->
+      <section id="estudio" class="section studio">
+        <div class="container container-wide studio-grid">
+          <!-- Imagen -->
+          <figure class="studio-media">
+            <img
+              src="assets/maiz.png"
+              alt="Vegetación en detalle, textura natural"
+              loading="lazy"
+            />
+          </figure>
+
+          <!-- Texto -->
+          <div class="studio-content stack-md">
+            <header class="services-head stack-sm">
+              <p class="services-eyebrow">ESTUDIO</p>
+              <h2 class="services-title">Naturaleza como sistema</h2>
+            </header>
+
+            <div class="stack-sm">
+              <p class="services-lead">
+                En Vástago Paisaje entendemos el diseño como una decisión
+                consciente. No decoramos espacios: los transformamos para que la
+                naturaleza y la vida cotidiana se encuentren.
+              </p>
+
+              <p class="services-lead">
+                Trabajamos con una mirada arquitectónica, sensible a la escala
+                humana y atenta al contexto. Cada proyecto es una oportunidad de
+                crear atmósferas que acompañen el habitar.
+              </p>
+            </div>
+
+          
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+    <!-- CONTACTO (ALMAS style) -->
+<section id="contacto" class="section contact contact--almas">
+  <div class="container container-wide stack-lg">
+    <!-- Head -->
+    <header class="contact-head stack-sm">
+      <p class="services-eyebrow">Contacto</p>
+      <h2 class="contact-title">
+        Coordinemos una consulta para tu espacio
+      </h2>
+      
+      
+    </header>
+
+    <!-- Form -->
+    <form class="contact-form" action="#" method="post">
+      <!-- 2 columnas -->
+      <div class="contact-fields">
+        <div class="field">
+          <label class="field-label" for="c-nombre">Nombre*</label>
+          <input class="field-input" id="c-nombre" name="nombre" type="text" autocomplete="given-name" required />
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="c-apellido">Apellidos*</label>
+          <input class="field-input" id="c-apellido" name="apellido" type="text" autocomplete="family-name" required />
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="c-email">Correo*</label>
+          <input class="field-input" id="c-email" name="email" type="email" autocomplete="email" required />
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="c-cel">Celular*</label>
+          <input class="field-input" id="c-cel" name="celular" type="tel" autocomplete="tel" placeholder="+598" required />
+        </div>
+
+        <!-- 1 columna (full) -->
+        <div class="field field-full">
+          <label class="field-label" for="c-zona">Zona*</label>
+          <select class="field-input field-select" id="c-zona" name="zona" required>
+            <option value="" disabled selected>Seleccionar</option>
+            <option>Montevideo</option>
+            <option>Canelones</option>
+            <option>Maldonado</option>
+          </select>
+        </div>
+
+        <div class="field field-full">
+          <label class="field-label" for="c-espacio">Tipo de espacio*</label>
+          <select class="field-input field-select" id="c-espacio" name="espacio" required>
+            <option value="" disabled selected>Seleccionar</option>
+            <option>Balcón</option>
+            <option>Patio</option>
+            <option>Terraza / azotea</option>
+            <option>Jardín</option>
+            <option>Comercial</option>
+          </select>
+        </div>
+
+        <div class="field field-full">
+          <label class="field-label" for="c-nivel">Nivel de intervención*</label>
+          <select class="field-input field-select" id="c-nivel" name="nivel" required>
+            <option value="" disabled selected>Seleccionar</option>
+            <option>Mejora puntual</option>
+            <option>Diseño integral</option>
+            <option>Diseño + instalación</option>
+            <option>Mantenimiento</option>
+          </select>
+        </div>
+
+        <div class="field field-full">
+          <label class="field-label" for="c-msg">Mensaje</label>
+          <textarea class="field-input field-textarea" id="c-msg" name="mensaje" rows="4" placeholder="Contanos brevemente tu espacio y objetivo…"></textarea>
+        </div>
       </div>
 
-      <div class="card">
-        <img src="img/oficina.png" alt="Selección de plantas para interior" />
-        <h3>SELECCIÓN</h3>
-        <p class="text-muted">
-          Elegimos especies según luz, clima y uso del espacio, priorizando equilibrio, resistencia y bajo mantenimiento.
-        </p>
+      <div class="contact-foot">
+        <button class="btn btn-primary" type="submit">
+          Enviar <span aria-hidden="true">→</span>
+        </button>
+        
       </div>
-
-      <div class="card">
-        <img src="img/azotea.png" alt="Integración de vegetación en arquitectura" />
-        <h3>INTEGRACIÓN</h3>
-        <p class="text-muted">
-          Integramos vegetación en proyectos arquitectónicos para mejorar la experiencia, el confort y la identidad del espacio.
-        </p>
-      </div>
-
-      <div class="card">
-        <img src="img/mantenimiento.png" alt="Mantenimiento de jardines" />
-        <h3>MANTENIMIENTO</h3>
-        <p class="text-muted">
-          Acompañamos el crecimiento del jardín con tareas de cuidado, poda, riego y seguimiento estacional.
-        </p>
-      </div>
-    </div>
+    </form>
   </div>
 </section>
+<!-- FOOTER -->
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container container-wide footer-grid">
 
+    <!-- Marca -->
+    <div class="footer-col footer-brand">
 
-    <!-- PROCESO / INFO -->
-<section id="proceso" class="section section-proceso">
-  <div class="container">
-    <h2 class="text-center">Nuestro proceso:</h2>
+      <!-- LOGO -->
+      <a href="index.html" class="footer-logo">
+        <img src="assets/logoblanco.png" alt="Vástago Paisaje" />
+      </a>
 
-    <div class="grid grid-3">
-      <!-- Card 1 -->
-      <div class="process-card">
-        <div class="process-icon" aria-hidden="true">
-          <!-- Visita / evaluación -->
-          <svg viewBox="0 0 24 24" fill="none">
-            <path
-              d="M12 22s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z"
-              stroke="currentColor"
-              stroke-width="2"
-            />
-            <path
-              d="M12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
-              stroke="currentColor"
-              stroke-width="2"
-            />
-          </svg>
-        </div>
-        <h3>Visita y evaluación</h3>
-        <p class="text-muted">
-          Analizamos el espacio, la luz, el uso y las necesidades.
-        </p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="process-card">
-        <div class="process-icon" aria-hidden="true">
-          <!-- Diseño / presupuesto -->
-          <svg viewBox="0 0 24 24" fill="none">
-            <path
-              d="M7 3h7l3 3v15a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"
-              stroke="currentColor"
-              stroke-width="2"
-            />
-            <path d="M14 3v3h3" stroke="currentColor" stroke-width="2" />
-            <path
-              d="M8 11h8M8 15h8M8 19h5"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
-        </div>
-        <h3>Diseño y presupuesto</h3>
-        <p class="text-muted">
-          Propuesta clara con materiales, tiempos y costos.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="process-card">
-        <div class="process-icon" aria-hidden="true">
-          <!-- Ejecución / seguimiento -->
-          <svg viewBox="0 0 24 24" fill="none">
-            <path
-              d="M20 6 9 17l-5-5"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M21 12a9 9 0 1 1-6-8.5"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
-        </div>
-        <h3>Ejecución y seguimiento</h3>
-        <p class="text-muted">
-          Implementamos y acompañamos el mantenimiento inicial.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FACUNDO / ABOUT -->
-<section id="facundo" class="section section-facundo">
-  <div class="container facundo-grid">
-    <!-- Foto -->
-    <div class="facundo-media">
-      <img src="img/facu.png" alt="Facundo Márquez, paisajista" />
-    </div>
-
-    <!-- Texto -->
-    <div class="facundo-content">
-      <span class="facundo-eyebrow">SOBRE FACUNDO</span>
-      <h2 class="facundo-title">Facundo Márquez</h2>
-
-      <p class="facundo-text">
-        Después de años trabajando en viveros y proyectos urbanos, Facundo decidió
-        enfocarse en crear espacios verdes que se vivan todos los días: terrazas,
-        patios, interiores y jardines que acompañan la arquitectura sin perder
-        naturalidad.
+      <p class="footer-text">
+        Estudio de paisajismo enfocado en el diseño consciente.
+        Transformamos espacios para que naturaleza y vida cotidiana se
+        encuentren.
       </p>
-
-      <p class="facundo-text facundo-text--muted">
-        Su enfoque prioriza especies adecuadas para cada luz y clima, diseño sobrio y
-        mantenimiento realista para que el espacio se sostenga en el tiempo.
-      </p>
     </div>
-  </div>
-</section>
-      <!-- CTA / CONTACTO -->
-     <section id="contacto" class="section section-contacto">
 
-  <div class="container text-center">
-    <h2>¿Tenés un espacio que <br>transformar?</h2>
-    <p class="text-muted">
-      Escribinos y coordinamos una visita sin compromiso.
+    <!-- Navegación -->
+    <div class="footer-col">
+      <p class="footer-kicker">Explorar</p>
+      <ul class="footer-links">
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="#estudio">Estudio</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Contacto -->
+    <div class="footer-col">
+      <p class="footer-kicker">Contacto</p>
+      <ul class="footer-links">
+        <li>
+          <a href="mailto:hola@vastagopaisaje.com">
+            hola@vastagopaisaje.com
+          </a>
+        </li>
+
+        <!-- Divider sutil -->
+      
+
+        <li>
+          <a href="tel:+59899888816">
+            +598 99 888 816
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Divider grande -->
+  <div class="footer-separator"></div>
+
+  <div class="container container-wide footer-bottom">
+    <p class="footer-copy">
+      © <span id="year"></span> Vástago Paisaje
     </p>
-
-    <a
-  href="https://wa.me/59899888816?text=Hola%20quiero%20coordinar%20una%20visita%20para%20mi%20espacio"
-  class="btn btn-primary cta-btn"
-  target="_blank"
-  rel="noopener"
->
-  Hablemos!
-</a>
   </div>
-</section>
-    </main>
-
-    <!-- FOOTER -->
-   <footer class="footer footer--minimal">
-  <div class="container footer-content">
-    <div class="footer-brand">
-      <img class="footer-logo-img" src="img/logo.svg" alt="vastago PAISAJE">
-      <div>
-        <p class="footer-title">Vástago Paisaje</p>
-        <p class="text-muted">
-          Estudio de diseño de paisaje. Integramos naturaleza y arquitectura en cada escala.
-        </p>
-      </div>
-    </div>
-
-    <div class="footer-contact">
-      <p class="footer-title">Contacto</p>
-      <p class="text-muted"><a href="https://www.instagram.com/vastago.paisaje?igsh=MXR6bWwzMWdwczZmdQ==" target="_blank" class="footer-link">@vastago.paisaje</a></p>
-      <p class="text-muted">Montevideo, Uruguay</p>
-    </div>
-  </div>
-
-  <p class="footer-copy text-muted">© 2026 Todos los derecho reservados.</p>
-
 </footer>
-
 <a
-  class="wa-float"
-  href="https://wa.me/59899888816?text=Hola%2C%20quiero%20coordinar%20una%20visita."
-  target="_blank"
-  rel="noopener"
-  aria-label="Chatear por WhatsApp"
-  title="Chatear por WhatsApp"
->
-  <svg
-    class="wa-float__icon"
-    viewBox="0 0 32 32"
-    aria-hidden="true"
-  >
-    <path
-      fill="currentColor"
-      d="M19.11 17.205c-.293-.146-1.733-.855-2.002-.95-.27-.098-.467-.146-.664.147-.197.293-.765.95-.94 1.146-.173.197-.347.22-.64.073-.293-.146-1.236-.455-2.354-1.45-.87-.776-1.46-1.735-1.632-2.028-.173-.293-.018-.45.13-.597.134-.133.293-.347.44-.52.146-.173.197-.293.293-.487.098-.197.05-.366-.024-.513-.073-.147-.664-1.61-.91-2.205-.24-.58-.487-.5-.664-.51l-.567-.01c-.197 0-.513.073-.78.366-.27.293-1.025 1.002-1.025 2.445 0 1.44 1.05 2.834 1.196 3.03.146.197 2.066 3.154 5.006 4.417.7.303 1.247.484 1.674.62.703.223 1.343.192 1.85.117.565-.084 1.733-.708 1.98-1.392.244-.684.244-1.27.17-1.392-.073-.123-.27-.197-.563-.343M16.003 3C9.374 3 4 8.373 4 15c0 2.313.664 4.47 1.817 6.29L4 29l7.93-1.786A11.95 11.95 0 0 0 16.003 27c6.627 0 12-5.373 12-12s-5.373-12-12-12"
-    />
-  </svg>
-
-  <span class="wa-float__text">WhatsApp</span>
-</a>
-<script src="js/navbar.js"></script>
-<script src="js/animations.js"></script>
+    href="https://wa.me/59899888816?text=Hola%20V%C3%A1stago%20Paisaje!%20Quiero%20coordinar%20una%20consulta%20para%20mi%20espacio%20verde."  class="whatsapp-sticky"
+      target="_blank"
+      rel="noopener"
+      aria-label="Contactar por WhatsApp"
+    >
+      <svg
+        class="btn-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.25"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+        <path
+          d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"
+        />
+      </svg>
+    </a>
+    
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script src="js/app.js"></script>
   </body>
 </html>

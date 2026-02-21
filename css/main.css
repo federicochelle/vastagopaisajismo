@@ -1,23 +1,29 @@
-/* BASE */
-@import "./base/reset.css";
-@import "./base/variables.css";
-@import "./base/spacing.css";
-@import "./base/typography.css";
+/* =========================
+   1. BASE (reset + variables)
+========================= */
+@import "base.css";
 
-/* LAYOUT */
-@import "./layout/container.css";
-@import "./layout/section.css";
-@import "./layout/grid.css";
+/* =========================
+   2. LAYOUT (estructura)
+========================= */
+@import "layout.css";
 
-/* COMPONENTS */
-@import "/css/components.css/card.css";
-@import "/css/components.css/button.css";
-@import "/css/components.css/input.css";
-@import "/css/components.css/navbar.css";
-@import "/css/components.css/badge.css";
-@import "/css/components.css/alert.css";
-@import "/css/components.css/modal.css";
-@import "/css/components.css/avatar.css";
-@import "/css/components.css/divider.css";
-@import "/css/components.css/list.css";
-@import "/css/components.css/footer.css";
+/* =========================
+   3. COMPONENTS (navbar, botones, cards)
+========================= */
+@import "components.css";
+@import "navbar.css";
+
+/* =========================
+   4. PAGES / SECTIONS (hero, landing)
+========================= */
+@import "hero.css";
+@import "proyectos.css";
+@import "servicios.css";
+@import "studio.css";
+@import "contacto.css";
+
+/* =========================
+   5. OVERRIDES / FIXES (siempre al final)
+========================= */
+@import "overrides.css";

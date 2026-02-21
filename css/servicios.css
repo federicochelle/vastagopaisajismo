@@ -1,0 +1,132 @@
+/* =========================
+   SERVICES (cards + link) — limpio
+   Usa tu .container / .section de la librería (no los redefinimos)
+========================= */
+
+/* Header */
+.services-head {
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.services-eyebrow {
+  margin: 0 0 0.55rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.services-title {
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.services-lead {
+  margin: 0.85rem 0 0;
+  line-height: 1.6;
+  opacity: 0.75;
+  max-width: 42rem;
+  font-size: 1.1rem;
+}
+
+/* Cards grid */
+.services-cards {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.service-card {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 1rem;
+  padding: clamp(1.2rem, 2.4vw, 1.9rem);
+  text-decoration: none;
+  color: inherit;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* Icono: alineado arriba + tamaño coherente */
+.service-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: start;
+  opacity: 0.9;
+}
+
+.service-icon svg {
+  width: 64px;
+  height: 64px;
+  display: block;
+}
+
+/* Texto */
+.service-title {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.service-desc {
+  margin: 0.45rem 0 0;
+  line-height: 1.6;
+  opacity: 0.78;
+  max-width: 46rem;
+  font-size: 1rem;
+}
+
+/* Hover (sutil) */
+@media (hover: hover) and (pointer: fine) {
+  .service-card {
+    transition:
+      background 0.25s ease,
+      transform 0.2s ease;
+  }
+  .service-card:hover {
+    background: rgba(0, 0, 0, 0.02);
+    transform: translateY(-1px);
+  }
+}
+
+/* Desktop: 2 columnas + divisores */
+@media (min-width: 1024px) {
+  .services-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-card {
+    border-top: none; /* el borde lo maneja la grilla */
+  }
+
+  .service-card:nth-child(odd) {
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  .service-card:nth-child(n + 3) {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Link “ver más” */
+.services-more {
+  margin-top: 3.25rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .services-more-link {
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+  .services-more-link:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+}

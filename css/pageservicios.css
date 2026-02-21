@@ -1,0 +1,185 @@
+/* =========================
+   SERVICES PAGE (layout only)
+   Compatible con tu librería
+========================= */
+
+.services-page {
+  --sp-border: var(--color-border, rgba(0, 0, 0, 0.12));
+  --sp-muted: var(--color-text-muted, rgba(0, 0, 0, 0.72));
+}
+
+/* NO tocamos .container ni .section */
+
+/* Typography helpers */
+
+.sp-muted {
+  margin: 0.75rem 0 0;
+  color: var(--sp-muted);
+  line-height: 1.65;
+  max-width: 52rem;
+}
+
+.sp-kicker {
+  margin: 0.5rem 0 0;
+  color: var(--sp-muted);
+  line-height: 1.6;
+}
+
+.sp-label {
+  margin: 0 0 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.sp-text {
+  margin: 0;
+  color: var(--sp-muted);
+  line-height: 1.7;
+  max-width: 62rem;
+}
+
+.sp-list {
+  margin: 0.85rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 42rem;
+}
+.sp-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sp-list li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.sp-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+/* HERO IMAGE */
+.sp-hero-media {
+  padding-top: 0;
+}
+
+.sp-hero-figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--sp-border);
+}
+
+.sp-hero-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+}
+
+/* SERVICES LIST (alternated layout) */
+.sp-service-list {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3rem);
+}
+
+.sp-service--alt {
+  display: grid;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.sp-service-media {
+  overflow: hidden;
+  border: 1px solid var(--sp-border);
+}
+
+.sp-service-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.sp-service-body {
+  margin-top: 1.05rem;
+}
+
+.sp-cols {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+/* Mini gallery */
+.sp-mini-gallery {
+  display: grid;
+  gap: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+.sp-mini {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--sp-border);
+}
+
+.sp-mini img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Desktop layout */
+@media (min-width: 1024px) {
+  .sp-service--alt {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.25rem;
+  }
+
+  .sp-service--flip .sp-service-media {
+    order: 2;
+  }
+
+  .sp-service--flip .sp-service-content {
+    order: 1;
+  }
+
+  .sp-cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .sp-mini-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* CTA box (sin botón personalizado) */
+.sp-cta-box {
+  border: 1px solid var(--sp-border);
+  padding: clamp(1.35rem, 2.5vw, 2rem);
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .sp-cta-box {
+    grid-template-columns: 1fr auto;
+    gap: 1.25rem;
+  }
+}

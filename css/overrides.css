@@ -1,0 +1,87 @@
+/* =====================================================
+   OVERRIDES — VÁSTAGO
+   (solo decisiones del sitio)
+===================================================== */
+
+/* 0) TOKENS DE MARCA (Vástago) */
+:root {
+  /* Verdes */
+  --pg-green-dark: #0f2a1d; /* fondo profundo */
+  --pg-green-mid: #1f4d3a; /* overlays / navbar */
+  --pg-green-soft: #3f6f5a; /* detalles */
+
+  /* Arena / tierra */
+  --pg-sand: #f6f3ea;
+
+  /* Texto */
+  --pg-text-light: #f5f7f4;
+  --pg-text-muted: #cfd8d3;
+
+  /* Puente hacia tokens de la librería */
+  --color-bg: var(--pg-sand);
+  --color-surface: rgba(255, 255, 255, 0.55); /* cards “papel” sobre arena */
+  --color-text: var(--pg-green-dark);
+  --color-text-muted: rgba(15, 42, 29, 0.75);
+  --color-border: rgba(15, 42, 29, 0.18);
+
+  --color-primary: var(--pg-green-mid);
+  --color-primary-dark: var(--pg-green-dark);
+
+  --header-bg: rgba(220, 231, 214, 0.72);
+  --overlay-bg: rgba(31, 77, 58, 0.55);
+
+  /* Extras que tu librería usa pero no estaban en base.css */
+  --shadow-sm: 0 10px 25px rgba(15, 42, 29, 0.1);
+  --shadow-md: 0 18px 45px rgba(15, 42, 29, 0.16);
+  --radius-pill: 999px;
+
+  /* scroll offset (si luego volvés a meter navbar sticky) */
+  --nav-offset: 84px;
+
+  --font-ui: "Manrope", system-ui, -apple-system, Segoe UI, sans-serif;
+  --font-display: "Fraunces", serif;
+}
+
+/* 1) Fondo global (si querés textura/imagen, lo dejás acá) */
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* 2) Scroll suave + anclas con offset */
+html {
+  scroll-padding-top: var(--nav-offset);
+  scroll-behavior: smooth;
+}
+
+/* Fraunces se ve mejor sin “bold” pesado */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800; /* antes era bold en base */
+  line-height: 1.22; /* más editorial */
+}
+
+/* Opcional: el h1 puede ir un pelín más apretado */
+h1 {
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+/* Eyebrows en UI (para que contraste con Fraunces) */
+.services-eyebrow,
+.projects-eyebrow,
+.studio .services-eyebrow {
+  font-family: var(--font-ui);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.project-name {
+  font-family: var(--font-display);
+}

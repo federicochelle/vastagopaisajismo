@@ -1,0 +1,47 @@
+/* =========================
+   STUDIO (home) — imagen + texto
+========================= */
+
+.studio-grid {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+  align-items: center;
+}
+
+.studio-media {
+  margin: 0;
+  overflow: hidden;
+}
+
+.studio-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 12;
+  object-fit: cover;
+}
+
+.studio-title {
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  max-width: 22ch; /* se siente editorial */
+}
+
+.studio-copy p {
+  margin: 0;
+  max-width: 52ch; /* lectura premium */
+  line-height: 1.65;
+}
+
+/* Desktop: imagen grande izq / texto der */
+@media (min-width: 1024px) {
+  .studio-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+
+  .studio-media img {
+    aspect-ratio: 4 / 3; /* parecido a tu referencia */
+  }
+}

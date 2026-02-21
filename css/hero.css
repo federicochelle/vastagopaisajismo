@@ -1,0 +1,172 @@
+/* =========================
+   HERO CON IMAGEN (CORREGIDO + MOBILE OVERLAY MÁS FUERTE)
+========================= */
+
+/* 1) .section mete padding grande: el hero maneja su propio ritmo */
+.hero.section {
+  padding-block: 0;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: var(--pg-text-light);
+  background: var(--pg-green-dark); /* fallback */
+}
+
+/* Imagen */
+.hero-media {
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/hero.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  z-index: 0;
+  transform: scale(1.02);
+  filter: brightness(0.65);
+}
+
+/* Overlay base */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15, 42, 29, 0.72) 0%,
+      rgba(15, 42, 29, 0.6) 45%,
+      rgba(15, 42, 29, 0.88) 100%
+    ),
+    radial-gradient(
+      900px 520px at 22% 18%,
+      rgba(63, 111, 90, 0.32),
+      transparent 62%
+    );
+}
+
+/* Contenido */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  min-height: clamp(520px, 75vh, 820px);
+  display: grid;
+  align-items: center;
+  padding-block: clamp(3rem, 6vw, 5.5rem);
+}
+
+.hero-content {
+  max-width: 780px;
+}
+
+/* Kicker */
+
+/* Título */
+.hero-title {
+  font-size: clamp(2.5rem, 4.8vw, 3.2rem);
+  line-height: 1.08;
+  margin: 0;
+  color: var(--pg-text-light);
+  text-shadow: 0 14px 30px rgba(0, 0, 0, 0.32);
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+/* Lead */
+.hero-lead {
+  max-width: 55ch;
+  font-size: 1.25rem;
+  line-height: 1.55;
+  margin: 0;
+  color: rgba(245, 247, 244, 0.86);
+  text-shadow: 0 12px 26px rgba(0, 0, 0, 0.26);
+}
+
+/* Botones */
+.hero-actions {
+  gap: 0.75rem;
+}
+
+/* Outline: que no “desaparezca” sobre la imagen */
+.hero-btn-outline {
+  border-color: rgba(245, 247, 244, 0.35);
+  color: var(--pg-text-light);
+  background: rgba(255, 255, 255, 0.24); /* antes estaba blanco, quedaba raro */
+}
+.hero-btn-outline:hover {
+  background: rgba(15, 42, 29, 0.24);
+  border-color: rgba(245, 247, 244, 0.5);
+}
+
+/* Fade inferior (corregido: debajo del contenido) */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 200px;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 42, 29, 0) 0%,
+    rgba(15, 42, 29, 0.35) 45%,
+    var(--color-bg) 100%
+  );
+  z-index: 1; /* 👈 debajo del contenido (contenido tiene z-index:2) */
+  pointer-events: none;
+}
+
+/* =========================
+   MOBILE: overlay más fuerte + fade más alto
+========================= */
+@media (max-width: 600px) {
+  .hero-media {
+    background-position: center;
+  }
+  .hero-inner {
+    min-height: clamp(460px, 70vh, 700px);
+    padding-block: 3.5rem;
+  }
+
+  .hero-lead {
+    font-size: 0.98rem;
+  }
+
+  /* Overlay más intenso en mobile (mejor legibilidad) */
+  .hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(15, 42, 29, 0.88) 0%,
+        rgba(15, 42, 29, 0.78) 45%,
+        rgba(15, 42, 29, 0.93) 100%
+      ),
+      radial-gradient(
+        760px 520px at 50% 40%,
+        rgba(15, 42, 29, 0.58),
+        transparent 68%
+      );
+  }
+
+  /* Fade inferior un poco más alto en mobile */
+  .hero::after {
+    height: 130px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-inner {
+    min-height: clamp(620px, 90vh, 980px);
+  }
+  .hero-actions .btn {
+    padding: 1rem 2rem; /* más aire */
+    font-size: 1.05rem; /* ligeramente más grande */
+    /* más elegante */
+  }
+
+  .hero-actions {
+    gap: 1rem; /* más separación */
+  }
+}

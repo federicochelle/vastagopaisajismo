@@ -1,0 +1,143 @@
+/* =========================
+   ESPACIOS — estilos page
+   (pensado para heredar tu librería: container, btn, services-head)
+========================= */
+
+/* Hero usa tu sistema actual. Solo ajustamos la imagen */
+.sp-hero .sp-hero-media {
+  background-image: url("../assets/hero.png"); /* cambiá por una imagen editorial de espacios */
+}
+
+/* Índice tipo “pills” */
+.sp-index {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.sp-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.sp-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 0.95rem;
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(6px);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .sp-pill:hover {
+    background: rgba(255, 255, 255, 0.55);
+  }
+}
+
+/* Bloques */
+.sp-block {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.sp-block-grid {
+  display: grid;
+  gap: clamp(1.4rem, 4vw, 2.25rem);
+  align-items: center;
+}
+
+/* Imagen */
+.sp-media {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.sp-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Texto */
+.sp-body .services-lead {
+  max-width: 56ch;
+}
+
+/* Lista */
+.sp-list {
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.6rem;
+  color: var(--color-text-muted);
+}
+
+.sp-list li {
+  position: relative;
+  padding-left: 1.05rem;
+}
+
+.sp-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--pg-green-soft);
+  opacity: 0.9;
+}
+
+/* Acciones */
+.sp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Alternar layout en desktop */
+@media (min-width: 1024px) {
+  .sp-block-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+
+  .sp-block--alt .sp-media {
+    order: 2;
+  }
+
+  .sp-block--alt .sp-body {
+    order: 1;
+  }
+}
+
+/* CTA final */
+.sp-cta-box {
+  border: 1px solid var(--color-border);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(8px);
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .sp-cta-box {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+/* Mobile: imagen arriba, texto abajo (natural) */
+@media (max-width: 900px) {
+  .sp-pill {
+    width: auto;
+  }
+}

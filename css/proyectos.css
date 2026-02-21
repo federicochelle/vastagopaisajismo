@@ -1,0 +1,82 @@
+/* ==============================
+  ESPACIOS / PROJECTS SECTION
+============================== */
+
+.projects-grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+/* Card base */
+.project {
+  position: relative;
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+/* Imagen contenedor */
+.project-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  display: block;
+}
+
+/* Overlay inferior */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.25) 40%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
+
+.project-name {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+/* Hover efecto */
+.project:hover img {
+  transform: scale(1.06);
+}
+
+/* ==============================
+   DESKTOP LAYOUT
+============================== */
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Los 3 de arriba: 3 tarjetas iguales */
+  .project {
+    grid-column: span 2;
+  }
+
+  /* Los 2 de abajo: más grandes y lado a lado */
+  .project-large {
+    grid-column: span 3;
+  }
+
+  /* Altura más “hero” para los grandes (opcional) */
+  .project-large .project-media {
+    aspect-ratio: 16 / 10;
+  }
+}
