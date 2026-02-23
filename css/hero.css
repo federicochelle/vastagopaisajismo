@@ -28,24 +28,6 @@
 }
 
 /* Overlay base */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(15, 42, 29, 0.72) 0%,
-      rgba(15, 42, 29, 0.6) 45%,
-      rgba(15, 42, 29, 0.88) 100%
-    ),
-    radial-gradient(
-      900px 520px at 22% 18%,
-      rgba(63, 111, 90, 0.32),
-      transparent 62%
-    );
-}
 
 /* Contenido */
 .hero-inner {
@@ -94,7 +76,7 @@
 /* Outline: que no “desaparezca” sobre la imagen */
 .hero-btn-outline {
   border-color: rgba(245, 247, 244, 0.35);
-  color: var(--pg-text-light);
+  color: var(--color-primary);
   background: rgba(255, 255, 255, 0.24); /* antes estaba blanco, quedaba raro */
 }
 .hero-btn-outline:hover {
@@ -109,11 +91,10 @@
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 400px;
+  height: 200px;
   background: linear-gradient(
-    180deg,
-    rgba(15, 42, 29, 0) 0%,
-    rgba(15, 42, 29, 0.35) 45%,
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
     var(--color-bg) 100%
   );
   z-index: 1; /* 👈 debajo del contenido (contenido tiene z-index:2) */
@@ -125,7 +106,10 @@
 ========================= */
 @media (max-width: 760px) {
   .hero-title {
-    max-width: 60vw;
+    max-width: 63vw;
+  }
+  .hero-lead {
+    color: var(--color-primary);
   }
   .hero-media {
     background-position: center;
@@ -143,7 +127,7 @@
 
 @media (min-width: 1000px) {
   .hero::after {
-    height: 700px; /* más alto para pantallas grandes */
+    height: 400px; /* más alto para pantallas grandes */
   }
 
   .hero-title {
