@@ -109,7 +109,7 @@
 ========================= */
 @media (max-width: 760px) {
   .hero-title {
-    max-width: 63vw;
+    max-width: 70vw;
   }
   .hero-lead {
     color: var(--color-bg);
@@ -120,6 +120,10 @@
   .hero-inner {
     min-height: clamp(460px, 70vh, 700px);
     padding-block: 3.5rem;
+  }
+  .hero-content {
+    max-width: 700px;
+    padding-top: 20vh;
   }
 
   .hero-lead {
