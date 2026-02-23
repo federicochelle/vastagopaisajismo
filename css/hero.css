@@ -18,13 +18,13 @@
 .hero-media {
   position: absolute;
   inset: 0;
-  background-image: url("../assets/hero.png");
+  background-image: url("../assets/heroo.png");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
   z-index: 0;
   transform: scale(1.02);
-  filter: brightness(0.65);
+  filter: brightness(1);
 }
 
 /* Overlay base */
@@ -68,7 +68,7 @@
   font-size: clamp(2.5rem, 4.8vw, 3.2rem);
   line-height: 1.08;
   margin: 0;
-  color: var(--pg-text-light);
+  color: var(--color-primary);
   text-shadow: 0 14px 30px rgba(0, 0, 0, 0.32);
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
@@ -80,8 +80,10 @@
   font-size: 1.25rem;
   line-height: 1.55;
   margin: 0;
-  color: rgba(245, 247, 244, 0.86);
+  color: var(--color-primary);
   text-shadow: 0 12px 26px rgba(0, 0, 0, 0.26);
+  font-weight: 600;
+  margin-bottom: 2rem;
 }
 
 /* Botones */
@@ -107,7 +109,7 @@
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 200px;
+  height: 400px;
   background: linear-gradient(
     180deg,
     rgba(15, 42, 29, 0) 0%,
@@ -121,7 +123,10 @@
 /* =========================
    MOBILE: overlay más fuerte + fade más alto
 ========================= */
-@media (max-width: 600px) {
+@media (max-width: 760px) {
+  .hero-title {
+    max-width: 50vw;
+  }
   .hero-media {
     background-position: center;
   }
@@ -131,32 +136,22 @@
   }
 
   .hero-lead {
-    font-size: 0.98rem;
-  }
-
-  /* Overlay más intenso en mobile (mejor legibilidad) */
-  .hero-overlay {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(15, 42, 29, 0.88) 0%,
-        rgba(15, 42, 29, 0.78) 45%,
-        rgba(15, 42, 29, 0.93) 100%
-      ),
-      radial-gradient(
-        760px 520px at 50% 40%,
-        rgba(15, 42, 29, 0.58),
-        transparent 68%
-      );
-  }
-
-  /* Fade inferior un poco más alto en mobile */
-  .hero::after {
-    height: 130px;
+    font-size: 1rem;
+    font-weight: 600;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
+  .hero::after {
+    height: 700px; /* más alto para pantallas grandes */
+  }
+
+  .hero-title {
+    font-size: clamp(3.5rem, 4.8vw, 3.8rem);
+  }
+  .hero-lead {
+    color: var(--color-bg);
+  }
   .hero-inner {
     min-height: clamp(620px, 90vh, 980px);
   }
