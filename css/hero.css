@@ -18,7 +18,7 @@
 .hero-media {
   position: absolute;
   inset: 0;
-  background-image: url("../assets/heroo.png");
+  background-image: url("../assets/hero.jpg");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -109,7 +109,7 @@
     max-width: 63vw;
   }
   .hero-lead {
-    color: var(--color-primary);
+    color: var(--color-bg);
   }
   .hero-media {
     background-position: center;
