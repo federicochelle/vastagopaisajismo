@@ -12,6 +12,7 @@
   overflow: hidden;
   color: var(--pg-text-light);
   background: var(--pg-green-dark); /* fallback */
+  height: 100vh;
 }
 
 /* Imagen */
@@ -20,7 +21,7 @@
   inset: 0;
   background-image: url("../assets/hero.jpg");
   background-size: cover;
-  background-position: bottom;
+  background-position: center top;
   background-repeat: no-repeat;
   z-index: 0;
   transform: scale(1.02);
@@ -40,7 +41,8 @@
 }
 
 .hero-content {
-  max-width: 780px;
+  max-width: 700px;
+  padding-top: 25vh;
 }
 
 /* Kicker */
@@ -54,6 +56,7 @@
   text-shadow: 0 14px 30px rgba(0, 0, 0, 0.32);
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
+  max-width: 55ch;
 }
 
 /* Lead */
@@ -123,15 +126,22 @@
     font-size: 1rem;
     font-weight: 600;
   }
+  .hero {
+    height: 90vh;
+  }
 }
 
 @media (min-width: 1000px) {
   .hero::after {
-    height: 400px; /* más alto para pantallas grandes */
+    height: 200px; /* más alto para pantallas grandes */
   }
 
   .hero-title {
     font-size: clamp(3.5rem, 4.8vw, 3.8rem);
+  }
+
+  .hero-lead {
+    color: var(--color-primary);
   }
 
   .hero-inner {
