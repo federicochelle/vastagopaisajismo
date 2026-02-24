@@ -103,6 +103,7 @@
   color: var(--color-text-muted);
   font-weight: var(--font-weight-medium);
   transition: color var(--transition-fast);
+  font-weight: 700;
 }
 
 .nav-link:hover {
@@ -219,7 +220,7 @@
   .mobile-menu .nav-mobile {
     max-width: 1200px;
     margin-inline: auto;
-    background: var(--header-bg, rgba(11, 15, 20, 0.95));
+    background: var(--header-bg);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     padding: var(--space-md);

@@ -2,7 +2,9 @@
    SERVICES PAGE (layout only)
    Compatible con tu librería
 ========================= */
-
+main {
+  padding-top: 4rem;
+}
 .services-page {
   --sp-border: var(--color-border, rgba(0, 0, 0, 0.12));
   --sp-muted: var(--color-text-muted, rgba(0, 0, 0, 0.72));

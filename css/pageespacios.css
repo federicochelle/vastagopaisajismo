@@ -2,7 +2,9 @@
    ESPACIOS — estilos page
    (pensado para heredar tu librería: container, btn, services-head)
 ========================= */
-
+main {
+  padding-top: 4rem;
+}
 /* Hero usa tu sistema actual. Solo ajustamos la imagen */
 .sp-hero .sp-hero-media {
   background-image: url("../assets/hero.png"); /* cambiá por una imagen editorial de espacios */

@@ -145,7 +145,7 @@
   }
 
   .hero-lead {
-    color: var(--color-primary);
+    color: var(--color-bg);
   }
 
   .hero-inner {
